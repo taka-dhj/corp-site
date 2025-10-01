@@ -7,7 +7,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
   
   html {
-    font-family: 'Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+    font-family: 'Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif ;
     font-weight: 300;
     letter-spacing: -0.01em;
     text-rendering: optimizeLegibility;
