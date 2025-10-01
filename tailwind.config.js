@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'display': ['Kiwi Maru', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
-        'body': ['Kiwi Maru', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
-        'elegant': ['Kiwi Maru', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
-        'elegant-serif': ['Kiwi Maru', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif']
+        'display': ['Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
+        'body': ['Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
+        'elegant': ['Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
+        'elegant-serif': ['Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif']
       },
       fontWeight: {
         'ultralight': '100',
