@@ -462,7 +462,7 @@ function App() {
           </div>
           
           <h1 className="text-8xl md:text-9xl lg:text-[8rem] font-light text-white mb-12 leading-[1.5] tracking-tight">
-            <span className="font-['Shippori_Mincho']">本物の日本と<br />
+            <span className="font-['Klee_One']">本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
@@ -520,7 +520,7 @@ function App() {
             </p>
             <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
             <h2 className="text-5xl md:text-7xl font-light text-gray-900 mb-16 tracking-tight">
-              <span className="font-['Shippori_Mincho']">心と土地を結び、<br />
+              <span className="font-['Klee_One']">心と土地を結び、<br />
               <span className="text-rose-600">時を紡ぐ</span>
               </span>
             </h2>
