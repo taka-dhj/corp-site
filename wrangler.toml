@@ -1,0 +1,14 @@
+name = "discovery-hidden-japan"
+main = "functions/api/send-email.js"
+compatibility_date = "2024-01-01"
+
+[env.production.vars]
+# Environment variables will be set in Cloudflare dashboard
+# RESEND_API_KEY = "your-resend-api-key"
+
+[[env.production.routes]]
+pattern = "discoveryhiddenjapan.com/api/*"
+zone_name = "discoveryhiddenjapan.com"
+
+[build]
+command = "npm run build"

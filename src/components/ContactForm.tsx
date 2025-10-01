@@ -42,33 +42,23 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     setSubmitStatus('idle');
 
     try {
-      // メール送信のシミュレーション（実際の実装では適切なAPIエンドポイントを使用）
-      const emailBody = `
-お問い合わせ内容
+      // Cloudflare Functionsを使用してメール送信
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-お名前: ${formData.name}
-メールアドレス: ${formData.email}
-会社名: ${formData.company}
-電話番号: ${formData.phone}
-件名: ${formData.subject}
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-メッセージ:
-${formData.message}
+      const result = await response.json();
 
----
-このメールはDiscovery Hidden Japanのウェブサイトから送信されました。
-      `.trim();
-
-      // mailto リンクを使用した簡易実装
-      const mailtoLink = `mailto:info@discoveryhiddenjapan.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
-      
-      // 実際のプロダクションでは、ここでサーバーサイドAPIを呼び出します
-      window.location.href = mailtoLink;
-      
-      // 成功状態をシミュレート
-      setTimeout(() => {
+      if (result.success) {
         setSubmitStatus('success');
-        setIsSubmitting(false);
         
         // 3秒後にフォームをリセットして閉じる
         setTimeout(() => {
@@ -83,10 +73,14 @@ ${formData.message}
           setSubmitStatus('idle');
           onClose();
         }, 3000);
-      }, 1000);
+      } else {
+        throw new Error(result.error || 'メール送信に失敗しました');
+      }
 
     } catch (error) {
+      console.error('Email sending error:', error);
       setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
     }
   };

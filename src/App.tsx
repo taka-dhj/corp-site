@@ -518,7 +518,7 @@ function App() {
           </div>
           
           <h1 className="text-8xl md:text-9xl lg:text-[8rem] font-light text-white mb-12 leading-[1.5] tracking-tight">
-            <span className="font-['Kiwi_Maru']">本物の日本と<br />
+            <span>本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
@@ -1001,14 +1001,26 @@ function App() {
           </p>
           
           <div className="flex justify-center">
-            <button 
-              onClick={() => setIsContactFormOpen(true)}
-              className="group bg-rose-600 hover:bg-rose-700 text-white px-12 py-6 transition-all duration-500 flex items-center gap-4 hover:gap-6 transform hover:-translate-y-1"
-            >
-              <Mail className="w-5 h-5" />
-              お問い合わせフォーム
-              <ExternalLink className="w-5 h-5" />
-            </button>
+            <div className="flex flex-col sm:flex-row gap-6 items-center">
+              <button 
+                onClick={() => setIsContactFormOpen(true)}
+                className="group bg-rose-600 hover:bg-rose-700 text-white px-12 py-6 transition-all duration-500 flex items-center gap-4 hover:gap-6 transform hover:-translate-y-1"
+              >
+                <Mail className="w-5 h-5" />
+                お問い合わせフォーム
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </button>
+              
+              <div className="text-center">
+                <p className="text-gray-600 mb-2">または直接メールでお問い合わせ</p>
+                <a 
+                  href="mailto:info@discoveryhiddenjapan.com?subject=お問い合わせ&body=お名前:%0D%0A会社名・団体名:%0D%0A電話番号:%0D%0A%0D%0Aお問い合わせ内容:%0D%0A"
+                  className="text-rose-600 hover:text-rose-700 font-medium underline"
+                >
+                  info@discoveryhiddenjapan.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
