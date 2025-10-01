@@ -462,7 +462,7 @@ function App() {
           </div>
           
           <h1 className="text-8xl md:text-9xl lg:text-[8rem] font-light text-white mb-12 leading-[1.5] tracking-tight">
-            <span className="font-['Klee_One'] font-normal">本物の日本と<br />
+            <span className="font-['Klee_One'] font-semibold text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[8rem] leading-[0.7] sm:leading-[1.2] md:leading-[1.5]">本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
@@ -475,16 +475,16 @@ function App() {
             新たな価値を提案します</span>
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 justify-center items-center px-4">
             <button className="group relative bg-rose-600 hover:bg-rose-700 text-white px-12 py-6 transition-all duration-500 flex items-center gap-4 hover:gap-6 transform hover:-translate-y-1">
-              <span className="text-lg font-light">サービス詳細</span>
+              <span className="text-sm sm:text-lg font-light leading-tight">サービス詳細</span>
               <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>
             <button 
               onClick={() => setIsContactFormOpen(true)}
               className="group relative border-2 border-white/40 hover:border-white text-white hover:bg-white/10 px-12 py-6 transition-all duration-500 backdrop-blur-sm"
             >
-              <span className="flex items-center gap-3 text-lg font-light">
+              <span className="flex items-center gap-3 text-sm sm:text-lg font-light leading-tight">
                 <Mail className="w-5 h-5" />
                 お問い合わせ
               </span>
