@@ -430,7 +430,7 @@ function App() {
       </header>
 
       {/* Hero Section with Dynamic Background */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden">
         {/* Dynamic Background Images */}
         {heroImages.map((image, index) => (
           <div 
@@ -453,7 +453,7 @@ function App() {
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/70 to-black/90"></div>
         
         {/* Content */}
-        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-4">
           <div className="mb-12">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
             <p className="text-gray-300 text-sm tracking-[0.4em] uppercase font-light mb-8">
@@ -461,8 +461,8 @@ function App() {
             </p>
           </div>
           
-          <h1 className="text-8xl md:text-9xl lg:text-[8rem] font-light text-white mb-12 leading-[1.5] tracking-tight">
-            <span className="hero-title font-['Klee_One'] font-semibold text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[8rem] leading-[0.7] sm:leading-[1.2] md:leading-[1.5]">本物の日本と<br />
+          <h1 className="hero-title text-8xl md:text-9xl lg:text-[8rem] font-light text-white mb-12 leading-[0.8] tracking-tight">
+            <span className="hero-title font-['Klee_One'] font-semibold text-2xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[8rem] leading-[0.75] sm:leading-[1.2] md:leading-[1.5]">本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
@@ -470,21 +470,21 @@ function App() {
             </span>
           </h1>
           
-          <p className="hero-subtitle text-2xl md:text-3xl text-gray-200 mb-16 max-w-4xl mx-auto leading-relaxed font-bold">
+          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 sm:mb-12 md:mb-16 max-w-4xl mx-auto leading-[1.2] font-bold">
             <span className="font-extrabold">地域の物語を紡ぎ、観光の未来に<br className="hidden md:block" />
             新たな価値を提案します</span>
           </p>
           
-          <div className="hero-buttons flex flex-col sm:flex-row gap-3 sm:gap-8 justify-center items-center px-4">
-            <button className="hero-button group relative bg-rose-600 hover:bg-rose-700 text-white px-12 py-6 transition-all duration-500 flex items-center gap-4 hover:gap-6 transform hover:-translate-y-1">
-              <span className="text-sm sm:text-lg font-light leading-tight">サービス詳細</span>
+          <div className="hero-buttons flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-8 justify-center items-center px-4">
+            <button className="hero-button group relative bg-rose-600 hover:bg-rose-700 text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 transition-all duration-500 flex items-center gap-2 sm:gap-4 hover:gap-6 transform hover:-translate-y-1">
+              <span className="text-xs sm:text-sm md:text-lg font-light leading-tight">サービス詳細</span>
               <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>
             <button 
               onClick={() => setIsContactFormOpen(true)}
-              className="hero-button group relative border-2 border-white/40 hover:border-white text-white hover:bg-white/10 px-12 py-6 transition-all duration-500 backdrop-blur-sm"
+              className="hero-button group relative border-2 border-white/40 hover:border-white text-white hover:bg-white/10 px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 transition-all duration-500 backdrop-blur-sm"
             >
-              <span className="flex items-center gap-3 text-sm sm:text-lg font-light leading-tight">
+              <span className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-lg font-light leading-tight">
                 <Mail className="w-5 h-5" />
                 お問い合わせ
               </span>
