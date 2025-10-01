@@ -8,7 +8,7 @@ export async function onRequestPost(context) {
 
   await resend.emails.send({
     from: 'onboarding@resend.dev',   // sandbox用の固定アドレス
-    to: 'taka@discoveryjhiddenjapan.com',  // テスト用
+    to: 'taka@discoveryhiddenjapan.com',  // テスト用
     subject: 'フォームテスト',
     html: `<p>${message}</p><p>From: ${email}</p>`,
   });
