@@ -705,7 +705,6 @@ function App() {
                 <div className="w-16 h-px bg-gray-300"></div>
               </div>
               <h3 className="text-3xl font-light text-gray-900 mb-4">
-              <h3 className="text-3xl font-normal text-gray-900 mb-4">
                 世界基準のデジタル戦略力
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed font-medium">
@@ -714,7 +713,7 @@ function App() {
             </div>
 
             {/* Strength 2 */}
-            <div 
+            <div
               id="strength-2"
               data-animate
               className={`transition-all duration-1000 delay-300 ${
@@ -738,7 +737,7 @@ function App() {
             </div>
 
             {/* Strength 3 */}
-            <div 
+            <div
               id="strength-3"
               data-animate
               className={`transition-all duration-1000 delay-400 ${
@@ -762,7 +761,7 @@ function App() {
             </div>
 
             {/* Strength 4 */}
-            <div 
+            <div
               id="strength-4"
               data-animate
               className={`transition-all duration-1000 delay-500 ${
@@ -874,7 +873,6 @@ function App() {
                 <tbody>
                   <tr className="border-b border-gray-200">
                     <td className="px-8 py-6 bg-gray-50 font-medium text-gray-900 w-1/3">
-                    <td className="px-8 py-6 bg-gray-50 font-semibold text-gray-900 w-1/3">
                       会社名
                     </td>
                     <td className="px-8 py-6 text-gray-700 font-medium">
