@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Zen Maru Gothic', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
-        'display': ['Zen Maru Gothic', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
-        'body': ['Zen Maru Gothic', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
-        'elegant': ['Zen Maru Gothic', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif'],
-        'elegant-serif': ['Zen Maru Gothic', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'sans-serif']
+        'sans': ['Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'serif'],
+        'display': ['Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'serif'],
+        'body': ['Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'serif'],
+        'elegant': ['Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'serif'],
+        'elegant-serif': ['Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'serif']
       },
       fontWeight: {
         'ultralight': '100',
@@ -17,7 +17,8 @@ export default {
         'normal': '400',
         'medium': '500',
         'semibold': '600',
-        'bold': '700'
+        'bold': '700',
+        'extrabold': '800'
       },
       animation: {
         'zoom-in': 'zoom-in 5s ease-out forwards',

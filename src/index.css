@@ -3,37 +3,42 @@
 @tailwind utilities;
 
 @layer base {
-  /* Import elegant fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+  /* Import Shippori Mincho font */
+  @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap');
   
   html {
-    font-family: 'Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
-    font-weight: 300;
-    letter-spacing: -0.01em;
+    font-family: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif !important;
+    font-weight: 400;
+    letter-spacing: 0.02em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
   body {
-    font-family: 'Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
-    font-weight: 300;
-    letter-spacing: -0.01em;
+    font-family: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif !important;
+    font-weight: 400;
+    letter-spacing: 0.02em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
+  /* Force Shippori Mincho on all elements */
+  * {
+    font-family: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif !important;
+  }
+  
   /* Elegant heading styles */
   .font-display {
-    font-family: 'Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-family: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif !important;
+    font-weight: 500;
+    letter-spacing: 0.01em;
   }
   
   .font-body {
-    font-family: 'Zen Maru Gothic', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif !important;
+    font-weight: 400;
   }
 
   /* Custom zoom animation */

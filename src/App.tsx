@@ -217,6 +217,10 @@ function App() {
                 }`}
                onClick={(e) => {
                  e.preventDefault();
+                 setIsMobileMenuOpen(false);
+                 setIsMobileMenuOpen(false);
+                 setIsMobileMenuOpen(false);
+                 setIsMobileMenuOpen(false);
                  const element = document.getElementById('services-header');
                  if (element) {
                    const offsetTop = element.offsetTop - 120;
@@ -368,18 +372,6 @@ function App() {
                 className={`font-light transition-colors duration-300 hover:text-rose-600 ${
                   scrollY > 100 ? 'text-gray-700' : 'text-white/90'
                 }`}
-               onClick={(e) => {
-                 e.preventDefault();
-                 setIsMobileMenuOpen(false);
-                 const element = document.getElementById('services-header');
-                 if (element) {
-                   const offsetTop = element.offsetTop - 120;
-                   window.scrollTo({
-                     top: offsetTop,
-                     behavior: 'smooth'
-                   });
-                 }
-               }}
               >
                 Services
               </a>
@@ -389,18 +381,6 @@ function App() {
                 className={`font-light transition-colors duration-300 hover:text-rose-600 ${
                   scrollY > 100 ? 'text-gray-700' : 'text-white/90'
                 }`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMobileMenuOpen(false);
-                  const element = document.getElementById('strengths');
-                  if (element) {
-                    const offsetTop = element.offsetTop - 120;
-                    window.scrollTo({
-                      top: offsetTop,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
               >
                 Strength
               </a>
@@ -410,18 +390,6 @@ function App() {
                 className={`font-light transition-colors duration-300 hover:text-rose-600 ${
                   scrollY > 100 ? 'text-gray-700' : 'text-white/90'
                 }`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMobileMenuOpen(false);
-                  const element = document.getElementById('executives-header');
-                  if (element) {
-                    const offsetTop = element.offsetTop - 120;
-                    window.scrollTo({
-                      top: offsetTop,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
               >
                 Executives
               </a>
@@ -431,18 +399,6 @@ function App() {
                 className={`font-light transition-colors duration-300 hover:text-rose-600 ${
                   scrollY > 100 ? 'text-gray-700' : 'text-white/90'
                 }`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMobileMenuOpen(false);
-                  const element = document.getElementById('company-info');
-                  if (element) {
-                    const offsetTop = element.offsetTop - 120;
-                    window.scrollTo({
-                      top: offsetTop,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
               >
                 Profile
               </a>
@@ -452,18 +408,6 @@ function App() {
                 className={`font-light transition-colors duration-300 hover:text-rose-600 ${
                   scrollY > 100 ? 'text-gray-700' : 'text-white/90'
                 }`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMobileMenuOpen(false);
-                  const element = document.getElementById('contact');
-                  if (element) {
-                    const offsetTop = element.offsetTop - 120;
-                    window.scrollTo({
-                      top: offsetTop,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
               >
                 Contact
               </a>
@@ -518,7 +462,7 @@ function App() {
           </div>
           
           <h1 className="text-8xl md:text-9xl lg:text-[8rem] font-light text-white mb-12 leading-[1.5] tracking-tight">
-            <span className="font-['Zen_Maru_Gothic']">本物の日本と<br />
+            <span className="font-['Shippori_Mincho']">本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
@@ -576,7 +520,7 @@ function App() {
             </p>
             <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
             <h2 className="text-5xl md:text-7xl font-light text-gray-900 mb-16 tracking-tight">
-              <span className="font-display">心と土地を結び、<br />
+              <span className="font-['Shippori_Mincho']">心と土地を結び、<br />
               <span className="text-rose-600">時を紡ぐ</span>
               </span>
             </h2>
