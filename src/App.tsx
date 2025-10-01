@@ -462,7 +462,7 @@ function App() {
           </div>
           
           <h1 className="text-8xl md:text-9xl lg:text-[8rem] font-light text-white mb-12 leading-[1.5] tracking-tight">
-            <span className="font-['Klee_One']">本物の日本と<br />
+            <span className="font-['Klee_One'] font-normal">本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
@@ -471,8 +471,8 @@ function App() {
           </h1>
           
           <p className="text-2xl md:text-3xl text-gray-200 mb-16 max-w-4xl mx-auto leading-relaxed font-bold">
-            地域の物語を紡ぎ、観光の未来に<br className="hidden md:block" />
-            新たな価値を提案します
+            <span className="font-extrabold">地域の物語を紡ぎ、観光の未来に<br className="hidden md:block" />
+            新たな価値を提案します</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
@@ -520,26 +520,26 @@ function App() {
             </p>
             <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
             <h2 className="text-5xl md:text-7xl font-light text-gray-900 mb-16 tracking-tight">
-              <span className="font-['Klee_One']">心と土地を結び、<br />
+              <span className="font-['Klee_One'] font-normal">心と土地を結び、<br />
               <span className="text-rose-600">時を紡ぐ</span>
               </span>
             </h2>
           </div>
           
           <div className="space-y-12 text-left max-w-4xl mx-auto">
-            <p className="text-2xl md:text-3xl text-gray-800 leading-relaxed font-light">
+            <p className="text-2xl md:text-3xl text-gray-800 leading-relaxed font-normal">
               私たちDiscovery Hidden Japanは、旅人と地域をつなぎ、日本に息づく隠れた美しさと物語を世界に届けます。
             </p>
             
             <div className="w-16 h-px bg-gray-300 my-8"></div>
             
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
               観光地化されすぎた風景の陰にある、本物の暮らし、文化、風土との出会いを大切にし、旅の価値を再定義します。
             </p>
             
             <div className="w-16 h-px bg-gray-300 my-8"></div>
             
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
               地方と旅人を結ぶ架け橋となり、オーバーツーリズムの緩和や地域創生を軸に社会課題の解決に取り組むことで、単なる観光事業ではない、人と心、地域と世界が織りなす、<span className="text-rose-600 font-normal">新しい時代のツーリズムを提唱</span>します。
             </p>
           </div>
@@ -557,11 +557,11 @@ function App() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-8 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-normal text-gray-900 mb-8 tracking-tight">
             事業概要
           </h2>
           <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
-          <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-normal">
             <span className="text-rose-600 font-normal">オーバーツーリズムの緩和</span>および<span className="text-rose-600 font-normal">地方創生の実現</span>を軸に、<br className="hidden md:block" />
             持続可能な観光の未来を創造します
           </p>
@@ -577,11 +577,11 @@ function App() {
                 }`}
               >
                 <div className="mb-8">
-                  <h3 className="text-6xl md:text-7xl font-light text-gray-900 mb-4 group-hover:text-rose-600 transition-colors duration-500">
+                  <h3 className="text-6xl md:text-7xl font-normal text-gray-900 mb-4 group-hover:text-rose-600 transition-colors duration-500">
                     {item.number}
                   </h3>
-                  <p className="text-xl font-normal text-gray-800 mb-3">{item.label}</p>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <p className="text-xl font-medium text-gray-800 mb-3">{item.label}</p>
+                  <p className="text-gray-600 leading-relaxed font-medium">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -601,11 +601,11 @@ function App() {
                 : 'opacity-0 translate-y-20'
             }`}
           >
-            <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-8 tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
               主要サービス
             </h2>
             <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
-            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
               5つの専門領域で、日本の観光業界に革新をもたらします
             </p>
           </div>
@@ -643,13 +643,13 @@ function App() {
                   </div>
                   
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-4 leading-tight">
+                    <h3 className="text-3xl md:text-4xl font-normal text-gray-900 mb-4 leading-tight">
                       {service.title}
                     </h3>
-                    <p className="text-xl text-rose-600 font-normal mb-6 leading-relaxed">
+                    <p className="text-xl text-rose-600 font-medium mb-6 leading-relaxed">
                       {service.subtitle}
                     </p>
-                    <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                    <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
                       {service.description}
                     </p>
                   </div>
@@ -658,7 +658,7 @@ function App() {
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center gap-4">
                         <CheckCircle className="w-5 h-5 text-rose-600 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <span className="text-gray-700 font-medium">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -681,7 +681,7 @@ function App() {
                 : 'opacity-0 translate-y-20'
             }`}
           >
-            <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-8 tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
               我々の強み
             </h2>
             <div className="w-24 h-px bg-rose-600 mx-auto"></div>
@@ -705,9 +705,10 @@ function App() {
                 <div className="w-16 h-px bg-gray-300"></div>
               </div>
               <h3 className="text-3xl font-light text-gray-900 mb-4">
+              <h3 className="text-3xl font-normal text-gray-900 mb-4">
                 世界基準のデジタル戦略力
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed font-medium">
                 Meta、Microsoft、Googleなどで経験を積んだメンバーが在籍。最新のテクノロジーとマーケティング知見を活かし、世界最先端の戦略を地域課題の解決に応用します。
               </p>
             </div>
@@ -728,10 +729,10 @@ function App() {
                 </div>
                 <div className="w-16 h-px bg-gray-300"></div>
               </div>
-              <h3 className="text-3xl font-light text-gray-900 mb-4">
+              <h3 className="text-3xl font-normal text-gray-900 mb-4">
                 圧倒的な「市場理解×現場実行力」
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed font-medium">
                 フィリピン現地在住者による最新トレンドのキャッチをはじめ、東南アジア各国とのコネクションを生かした、各国の嗜好と文化の熟知により、「現地の声を生かした独自コンテンツ制作」が可能です。
               </p>
             </div>
@@ -752,10 +753,10 @@ function App() {
                 </div>
                 <div className="w-16 h-px bg-gray-300"></div>
               </div>
-              <h3 className="text-3xl font-light text-gray-900 mb-4">
+              <h3 className="text-3xl font-normal text-gray-900 mb-4">
                 「地方創生・課題解決型」価値造成
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed font-medium">
                 地域資源の再発見による、社会課題の解決。観光を超えた「地方創生・課題解決型」の造成により、社会と共に持続的に成長する仕組みの提案こそが、私たちの強みです。
               </p>
             </div>
@@ -776,10 +777,10 @@ function App() {
                 </div>
                 <div className="w-16 h-px bg-gray-300"></div>
               </div>
-              <h3 className="text-3xl font-light text-gray-900 mb-4">
+              <h3 className="text-3xl font-normal text-gray-900 mb-4">
                 豊富な実績に裏打ちされた経験
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed font-medium">
                 各メンバーはこれまでに、自治体向けの地域活性コンサルティングや、IT導入による経営改革支援などを実施。現場に根ざした提案と実行力が、確実な成果を生み出します。
               </p>
             </div>
@@ -802,7 +803,7 @@ function App() {
             <p className="text-gray-400 text-sm tracking-[0.3em] uppercase font-light mb-8">
               Executives
             </p>
-            <h2 className="text-5xl md:text-6xl font-light text-white mb-8 tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-normal text-white mb-8 tracking-tight">
               役員紹介
             </h2>
             <div className="w-24 h-px bg-rose-600 mx-auto"></div>
@@ -826,17 +827,18 @@ function App() {
                     style={{ backgroundImage: `url(${executive.image})` }}
                   />
                   <h3 className="text-2xl font-light text-white mb-2">{executive.name}</h3>
-                  <p className="text-rose-600 font-normal text-lg mb-4">{executive.position}</p>
+                  <h3 className="text-2xl font-normal text-white mb-2">{executive.name}</h3>
+                  <p className="text-rose-600 font-medium text-lg mb-4">{executive.position}</p>
                 </div>
                 
                 <div className="space-y-6 text-left">
-                  <p className="text-gray-300 leading-relaxed font-light">
+                  <p className="text-gray-300 leading-relaxed font-normal">
                     {executive.background}
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
                     {executive.expertise.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full font-light">
+                      <span key={skillIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full font-normal">
                         {skill}
                       </span>
                     ))}
@@ -860,7 +862,7 @@ function App() {
       >
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-8 tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
               会社概要
             </h2>
             <div className="w-24 h-px bg-rose-600 mx-auto"></div>
@@ -872,49 +874,50 @@ function App() {
                 <tbody>
                   <tr className="border-b border-gray-200">
                     <td className="px-8 py-6 bg-gray-50 font-medium text-gray-900 w-1/3">
+                    <td className="px-8 py-6 bg-gray-50 font-semibold text-gray-900 w-1/3">
                       会社名
                     </td>
-                    <td className="px-8 py-6 text-gray-700">
+                    <td className="px-8 py-6 text-gray-700 font-medium">
                       Discovery Hidden Japan株式会社
                     </td>
                   </tr>
                   <tr className="border-b border-gray-200">
-                    <td className="px-8 py-6 bg-gray-50 font-medium text-gray-900">
+                    <td className="px-8 py-6 bg-gray-50 font-semibold text-gray-900">
                       所在地
                     </td>
-                    <td className="px-8 py-6 text-gray-700">
+                    <td className="px-8 py-6 text-gray-700 font-medium">
                       東京都港区高輪2丁目11番9号
                     </td>
                   </tr>
                   <tr className="border-b border-gray-200">
-                    <td className="px-8 py-6 bg-gray-50 font-medium text-gray-900">
+                    <td className="px-8 py-6 bg-gray-50 font-semibold text-gray-900">
                       資本金
                     </td>
-                    <td className="px-8 py-6 text-gray-700">
+                    <td className="px-8 py-6 text-gray-700 font-medium">
                       920万円
                     </td>
                   </tr>
                   <tr className="border-b border-gray-200">
-                    <td className="px-8 py-6 bg-gray-50 font-medium text-gray-900">
+                    <td className="px-8 py-6 bg-gray-50 font-semibold text-gray-900">
                       設立
                     </td>
-                    <td className="px-8 py-6 text-gray-700">
+                    <td className="px-8 py-6 text-gray-700 font-medium">
                       2025年7月17日
                     </td>
                   </tr>
                   <tr className="border-b border-gray-200">
-                    <td className="px-8 py-6 bg-gray-50 font-medium text-gray-900">
+                    <td className="px-8 py-6 bg-gray-50 font-semibold text-gray-900">
                       代表
                     </td>
-                    <td className="px-8 py-6 text-gray-700">
+                    <td className="px-8 py-6 text-gray-700 font-medium">
                       希代　翔
                     </td>
                   </tr>
                   <tr>
-                    <td className="px-8 py-6 bg-gray-50 font-medium text-gray-900">
+                    <td className="px-8 py-6 bg-gray-50 font-semibold text-gray-900">
                       登録資格
                     </td>
-                    <td className="px-8 py-6 text-gray-700">
+                    <td className="px-8 py-6 text-gray-700 font-medium">
                       ＜更新中＞
                     </td>
                   </tr>
@@ -936,11 +939,11 @@ function App() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-8 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
             お問い合わせ
           </h2>
           <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
-          <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed font-medium">
             革新的なソリューションで、日本の観光業界の未来を共に創造します
           </p>
           
@@ -956,10 +959,10 @@ function App() {
               </button>
               
               <div className="text-center">
-                <p className="text-gray-600 mb-2">または直接メールでお問い合わせ</p>
+                <p className="text-gray-600 mb-2 font-medium">または直接メールでお問い合わせ</p>
                 <a 
                   href="mailto:info@discoveryhiddenjapan.com?subject=お問い合わせ&body=お名前:%0D%0A会社名・団体名:%0D%0A電話番号:%0D%0A%0D%0Aお問い合わせ内容:%0D%0A"
-                  className="text-rose-600 hover:text-rose-700 font-medium underline"
+                  className="text-rose-600 hover:text-rose-700 font-semibold underline"
                 >
                   info@discoveryhiddenjapan.com
                 </a>
@@ -975,18 +978,18 @@ function App() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-4 mb-8">
               <Mountain className="w-8 h-8 text-rose-600" />
-              <h3 className="text-2xl font-light">Discovery Hidden Japan</h3>
+              <h3 className="text-2xl font-normal">Discovery Hidden Japan</h3>
             </div>
             
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
             
-            <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
               心と土地を結び、時を紡ぐ
             </p>
           </div>
           
           <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Discovery Hidden Japan. All rights reserved.</p>
+            <p className="font-medium">&copy; 2024 Discovery Hidden Japan. All rights reserved.</p>
           </div>
         </div>
       </footer>
