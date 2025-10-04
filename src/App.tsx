@@ -183,19 +183,13 @@ function App() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden font-body">
       {/* Navigation Header */}
-      <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-        scrollY > 100 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
-      }`}>
+      <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-lg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center gap-3">
               <Mountain className="w-8 h-8 text-rose-600" />
-              <span className={`text-xl font-light transition-colors duration-300 ${
-                scrollY > 100 ? 'text-gray-900' : 'text-white'
-              }`}>
+              <span className="text-xl font-light text-gray-900">
                 Discovery Hidden Japan
               </span>
             </div>
@@ -204,17 +198,13 @@ function App() {
             <nav className="hidden md:flex items-center gap-8">
               <a 
                 href="#philosophy" 
-                className={`font-light transition-colors duration-300 hover:text-rose-600 ${
-                  scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Philosophy
               </a>
               <a 
                 href="#services-header" 
-                className={`font-light transition-colors duration-300 hover:text-rose-600 ${
-                  scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
                onClick={(e) => {
                  e.preventDefault();
                  setIsMobileMenuOpen(false);
@@ -239,9 +229,7 @@ function App() {
                 onMouseLeave={() => setIsAboutDropdownOpen(false)}
               >
                 <button 
-                  className={`font-light transition-colors duration-300 hover:text-rose-600 flex items-center gap-1 ${
-                    scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                  }`}
+                  className="font-light transition-colors duration-300 hover:text-rose-600 flex items-center gap-1 text-gray-700"
                 >
                   About
                   <ChevronDown className="w-4 h-4" />
@@ -323,9 +311,7 @@ function App() {
               </div>
               <button 
                 onClick={() => setIsContactFormOpen(true)}
-                className={`px-6 py-2 border-2 transition-all duration-300 font-light ${
-                  scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="px-6 py-2 border-2 border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white transition-all duration-300 font-light"
               >
                 お問い合わせ
               </button>
@@ -334,9 +320,7 @@ function App() {
             {/* Mobile Menu Button */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`md:hidden p-2 transition-colors duration-300 ${
-                scrollY > 100 ? 'text-gray-900' : 'text-white'
-              }`}
+              className="md:hidden p-2 transition-colors duration-300 text-gray-900"
             >
               <div className="w-6 h-6 flex flex-col justify-center gap-1">
                 <div className={`h-0.5 bg-current transition-all duration-300 ${
@@ -356,58 +340,46 @@ function App() {
           <div className={`md:hidden transition-all duration-300 overflow-hidden ${
             isMobileMenuOpen ? 'max-h-96 pb-6' : 'max-h-0'
           }`}>
-            <nav className="flex flex-col gap-4 pt-4 border-t border-white/20">
+            <nav className="flex flex-col gap-4 pt-4 border-t border-gray-200">
               <a 
                 href="#philosophy" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`font-light transition-colors duration-300 hover:text-rose-600 ${
-                  scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Philosophy
               </a>
               <a 
                 href="#services-header" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`font-light transition-colors duration-300 hover:text-rose-600 ${
-                  scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Services
               </a>
               <a 
                 href="#strengths" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`font-light transition-colors duration-300 hover:text-rose-600 ${
-                  scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Strength
               </a>
               <a 
                 href="#executives-header" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`font-light transition-colors duration-300 hover:text-rose-600 ${
-                  scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Executives
               </a>
               <a 
                 href="#company-info" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`font-light transition-colors duration-300 hover:text-rose-600 ${
-                  scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Profile
               </a>
               <a 
                 href="#contact" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`font-light transition-colors duration-300 hover:text-rose-600 ${
-                  scrollY > 100 ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Contact
               </a>
@@ -416,11 +388,7 @@ function App() {
                   setIsContactFormOpen(true);
                   setIsMobileMenuOpen(false);
                 }}
-                className={`text-left px-6 py-2 border-2 transition-all duration-300 font-light ${
-                  scrollY > 100 
-                    ? 'border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white' 
-                    : 'border-white/40 text-white hover:bg-white/10'
-                }`}
+                className="text-left px-6 py-2 border-2 border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white transition-all duration-300 font-light"
               >
                 お問い合わせ
               </button>
@@ -430,7 +398,7 @@ function App() {
       </header>
 
       {/* Hero Section with Dynamic Background */}
-      <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden pt-20">
         {/* Dynamic Background Images */}
         {heroImages.map((image, index) => (
           <div 
@@ -462,7 +430,7 @@ function App() {
           </div>
           
           <h1 className="hero-title text-8xl md:text-9xl lg:text-[8rem] font-light text-white mb-12 leading-[0.8] tracking-tight">
-            <span className="hero-title font-['Klee_One'] font-semibold text-2xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[8rem] leading-[0.75] sm:leading-[1.2] md:leading-[1.5]">本物の日本と<br />
+            <span className="hero-title font-['Klee_One'] font-semibold text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[8rem] leading-[1.1] sm:leading-[1.2] md:leading-[1.5]">本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
@@ -470,7 +438,7 @@ function App() {
             </span>
           </h1>
           
-          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 sm:mb-12 md:mb-16 max-w-4xl mx-auto leading-[1.2] font-bold">
+          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 sm:mb-12 md:mb-16 max-w-4xl mx-auto leading-[1.4] font-bold">
             <span className="font-extrabold">地域の物語を紡ぎ、観光の未来に<br className="hidden md:block" />
             新たな価値を提案します</span>
           </p>
@@ -609,58 +577,56 @@ function App() {
               5つの専門領域で、日本の観光業界に革新をもたらします
             </p>
           </div>
-          
+
           <div className="space-y-24">
             {services.map((service, index) => (
-              <div 
-                key={index} 
-                id={`service-${index}`}
+              <div
+                key={index}
                 data-animate
-                className={`grid lg:grid-cols-2 gap-16 items-center transition-all duration-1000 delay-${index * 200} ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                } ${
-                  visibleSections.has(`service-${index}`) 
-                    ? 'opacity-100 translate-x-0' 
-                    : `opacity-0 ${index % 2 === 0 ? 'translate-x-20' : '-translate-x-20'}`
+                className={`transition-all duration-1000 delay-${index * 100} ${
+                  visibleSections.has('services-header')
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-20'
                 }`}
               >
-                {/* Image */}
-                <div className={`relative overflow-hidden ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  <div 
-                    className="aspect-[4/3] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700 transform hover:scale-105"
-                    style={{ backgroundImage: `url(${service.image})` }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
-                </div>
-                
-                {/* Content */}
-                <div className={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 bg-rose-600 text-white">
-                      {service.icon}
+                <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}>
+                  <div className="lg:w-1/2">
+                    <div className="relative h-96 overflow-hidden rounded-lg shadow-2xl group">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
-                    <div className="w-16 h-px bg-gray-300"></div>
                   </div>
-                  
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-normal text-gray-900 mb-4 leading-tight">
+
+                  <div className="lg:w-1/2 space-y-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="p-3 bg-rose-600 text-white rounded-lg">
+                        {service.icon}
+                      </div>
+                      <div className="h-px flex-1 bg-gray-200"></div>
+                    </div>
+
+                    <h3 className="text-3xl md:text-4xl font-normal text-gray-900 mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-xl text-rose-600 font-medium mb-6 leading-relaxed">
+                    <p className="text-lg text-rose-600 font-medium mb-4">
                       {service.subtitle}
                     </p>
-                    <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
+                    <p className="text-xl text-gray-700 leading-relaxed font-medium mb-6">
                       {service.description}
                     </p>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-4">
-                        <CheckCircle className="w-5 h-5 text-rose-600 flex-shrink-0" />
-                        <span className="text-gray-700 font-medium">{feature}</span>
-                      </div>
-                    ))}
+
+                    <div className="flex flex-wrap gap-3">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full">
+                          <CheckCircle className="w-4 h-4 text-rose-600" />
+                          <span className="text-gray-700 font-medium">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -670,117 +636,60 @@ function App() {
       </section>
 
       {/* Strengths Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div 
-            id="strengths"
-            data-animate
-            className={`text-center mb-20 transition-all duration-1000 ${
-              visibleSections.has('strengths') 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-20'
-            }`}
-          >
-            <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
-              我々の強み
+      <section
+        id="strengths"
+        data-animate
+        className={`py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white transition-all duration-1000 ${
+          visibleSections.has('strengths')
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-normal mb-8 tracking-tight">
+              私たちの強み
             </h2>
-            <div className="w-24 h-px bg-rose-600 mx-auto"></div>
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium">
+              多様な専門性と実績が生み出す、確かな価値
+            </p>
           </div>
-          
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Strength 1 */}
-            <div 
-              id="strength-1"
-              data-animate
-              className={`transition-all duration-1000 delay-200 ${
-                visibleSections.has('strength-1') 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-20'
-              }`}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-rose-600 text-white">
-                  <Globe className="w-8 h-8" />
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center group">
+              <div className="mb-6 flex justify-center">
+                <div className="p-6 bg-rose-600 rounded-full group-hover:scale-110 transition-transform duration-500">
+                  <Globe className="w-12 h-12" />
                 </div>
-                <div className="w-16 h-px bg-gray-300"></div>
               </div>
-              <h3 className="text-3xl font-light text-gray-900 mb-4">
-                世界基準のデジタル戦略力
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                Meta、Microsoft、Googleなどで経験を積んだメンバーが在籍。最新のテクノロジーとマーケティング知見を活かし、世界最先端の戦略を地域課題の解決に応用します。
+              <h3 className="text-2xl font-medium mb-4">グローバルな視点</h3>
+              <p className="text-gray-300 leading-relaxed font-medium">
+                外資系IT企業での豊富な経験を活かし、世界基準のサービスを提供
               </p>
             </div>
 
-            {/* Strength 2 */}
-            <div
-              id="strength-2"
-              data-animate
-              className={`transition-all duration-1000 delay-300 ${
-                visibleSections.has('strength-2') 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-20'
-              }`}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-rose-600 text-white">
-                  <Target className="w-8 h-8" />
+            <div className="text-center group">
+              <div className="mb-6 flex justify-center">
+                <div className="p-6 bg-rose-600 rounded-full group-hover:scale-110 transition-transform duration-500">
+                  <Brain className="w-12 h-12" />
                 </div>
-                <div className="w-16 h-px bg-gray-300"></div>
               </div>
-              <h3 className="text-3xl font-normal text-gray-900 mb-4">
-                圧倒的な「市場理解×現場実行力」
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                フィリピン現地在住者による最新トレンドのキャッチをはじめ、東南アジア各国とのコネクションを生かした、各国の嗜好と文化の熟知により、「現地の声を生かした独自コンテンツ制作」が可能です。
+              <h3 className="text-2xl font-medium mb-4">最先端技術</h3>
+              <p className="text-gray-300 leading-relaxed font-medium">
+                AI・DXを活用した業務効率化とデジタルマーケティング戦略
               </p>
             </div>
 
-            {/* Strength 3 */}
-            <div
-              id="strength-3"
-              data-animate
-              className={`transition-all duration-1000 delay-400 ${
-                visibleSections.has('strength-3') 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-20'
-              }`}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-rose-600 text-white">
-                  <Heart className="w-8 h-8" />
+            <div className="text-center group">
+              <div className="mb-6 flex justify-center">
+                <div className="p-6 bg-rose-600 rounded-full group-hover:scale-110 transition-transform duration-500">
+                  <Users className="w-12 h-12" />
                 </div>
-                <div className="w-16 h-px bg-gray-300"></div>
               </div>
-              <h3 className="text-3xl font-normal text-gray-900 mb-4">
-                「地方創生・課題解決型」価値造成
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                地域資源の再発見による、社会課題の解決。観光を超えた「地方創生・課題解決型」の造成により、社会と共に持続的に成長する仕組みの提案こそが、私たちの強みです。
-              </p>
-            </div>
-
-            {/* Strength 4 */}
-            <div
-              id="strength-4"
-              data-animate
-              className={`transition-all duration-1000 delay-500 ${
-                visibleSections.has('strength-4') 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-20'
-              }`}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-rose-600 text-white">
-                  <Award className="w-8 h-8" />
-                </div>
-                <div className="w-16 h-px bg-gray-300"></div>
-              </div>
-              <h3 className="text-3xl font-normal text-gray-900 mb-4">
-                豊富な実績に裏打ちされた経験
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                各メンバーはこれまでに、自治体向けの地域活性コンサルティングや、IT導入による経営改革支援などを実施。現場に根ざした提案と実行力が、確実な成果を生み出します。
+              <h3 className="text-2xl font-medium mb-4">実践的支援</h3>
+              <p className="text-gray-300 leading-relaxed font-medium">
+                戦略立案から実行まで、現場に寄り添った伴走型コンサルティング
               </p>
             </div>
           </div>
@@ -788,53 +697,63 @@ function App() {
       </section>
 
       {/* Executives Section */}
-      <section className="py-32 bg-gray-900 text-white">
+      <section
+        id="executives"
+        className="py-32 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4">
-          <div 
+          <div
             id="executives-header"
             data-animate
             className={`text-center mb-20 transition-all duration-1000 ${
-              visibleSections.has('executives-header') 
-                ? 'opacity-100 translate-y-0' 
+              visibleSections.has('executives-header')
+                ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-20'
             }`}
           >
-            <p className="text-gray-400 text-sm tracking-[0.3em] uppercase font-light mb-8">
-              Executives
-            </p>
-            <h2 className="text-5xl md:text-6xl font-normal text-white mb-8 tracking-tight">
-              役員紹介
+            <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
+              経営陣紹介
             </h2>
-            <div className="w-24 h-px bg-rose-600 mx-auto"></div>
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
+              多様なバックグラウンドと専門性を持つプロフェッショナル
+            </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {executives.map((executive, index) => (
-              <div 
-                key={index} 
-                id={`executive-${index}`}
+              <div
+                key={index}
                 data-animate
-                className={`group text-center hover:bg-white/5 p-8 rounded-lg transition-all duration-1000 delay-${index * 100} ${
-                  visibleSections.has(`executive-${index}`) 
-                    ? 'opacity-100 translate-y-0' 
+                className={`bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg overflow-hidden shadow-xl transition-all duration-1000 delay-${index * 100} hover:transform hover:-translate-y-2 ${
+                  visibleSections.has('executives-header')
+                    ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-20'
                 }`}
               >
-                <div className="mb-8">
-                  <div 
-                    className="w-48 h-48 rounded-full bg-cover bg-center mx-auto mb-6 grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110 shadow-2xl"
-                    style={{ backgroundImage: `url(${executive.image})` }}
+                <div className="relative h-80 overflow-hidden">
+                  <img
+                    src={executive.image}
+                    alt={executive.name}
+                    className="w-full h-full object-cover"
+                    style={
+                      executive.name === '希代 翔'
+                        ? { objectPosition: 'center 35%' }
+                        : executive.name === '藤本 芳浩'
+                        ? { objectPosition: 'center 40%' }
+                        : {}
+                    }
                   />
-                  <h3 className="text-2xl font-light text-white mb-2">{executive.name}</h3>
-                  <h3 className="text-2xl font-normal text-white mb-2">{executive.name}</h3>
-                  <p className="text-rose-600 font-medium text-lg mb-4">{executive.position}</p>
                 </div>
-                
-                <div className="space-y-6 text-left">
-                  <p className="text-gray-300 leading-relaxed font-normal">
+
+                <div className="p-8">
+                  <h3 className="text-2xl font-light text-white mb-2">{executive.name}</h3>
+                  <p className="text-rose-600 font-medium text-lg mb-4">{executive.position}</p>
+
+                  <p className="text-gray-300 leading-relaxed font-normal mb-6">
                     {executive.background}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {executive.expertise.map((skill, skillIndex) => (
                       <span key={skillIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full font-normal">
