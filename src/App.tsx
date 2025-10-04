@@ -422,33 +422,33 @@ function App() {
         
         {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-4">
-          <div className="mb-12">
+          <div className="mb-4 md:mb-12">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
-            <p className="text-gray-300 text-sm tracking-[0.4em] uppercase font-light mb-8">
+            <p className="text-gray-300 text-sm tracking-[0.4em] uppercase font-light mb-4 md:mb-8">
               Discovery Hidden Japan
             </p>
           </div>
-          
-          <h1 className="hero-title text-8xl md:text-9xl lg:text-[8rem] font-light text-white mb-12 leading-[0.8] tracking-tight">
-            <span className="hero-title font-['Klee_One'] font-semibold text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[8rem] leading-[1.1] sm:leading-[1.2] md:leading-[1.5]">本物の日本と<br />
+
+          <h1 className="hero-title text-8xl md:text-9xl lg:text-[8rem] font-light text-white leading-[0.8] tracking-tight">
+            <span className="hero-title font-['Klee_One'] font-semibold text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[8rem] leading-[2.0] sm:leading-[2.0] md:leading-[1.8] mb-12 md:mb-24 block">本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
             </span>
             </span>
           </h1>
-          
-          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 sm:mb-12 md:mb-16 max-w-4xl mx-auto leading-[1.4] font-bold">
+
+          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mt-[76px] mb-24 sm:mb-32 md:mb-32 max-w-4xl mx-auto leading-[1.4] font-bold">
             <span className="font-extrabold">地域の物語を紡ぎ、観光の未来に<br className="hidden md:block" />
             新たな価値を提案します</span>
           </p>
-          
-          <div className="hero-buttons flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-8 justify-center items-center px-4">
+
+          <div className="hero-buttons flex flex-col sm:flex-row gap-4 sm:gap-4 md:gap-8 justify-center items-center px-4">
             <button className="hero-button group relative bg-rose-600 hover:bg-rose-700 text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 transition-all duration-500 flex items-center gap-2 sm:gap-4 hover:gap-6 transform hover:-translate-y-1">
               <span className="text-xs sm:text-sm md:text-lg font-light leading-tight">サービス詳細</span>
               <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>
-            <button 
+            <button
               onClick={() => setIsContactFormOpen(true)}
               className="hero-button group relative border-2 border-white/40 hover:border-white text-white hover:bg-white/10 px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 transition-all duration-500 backdrop-blur-sm"
             >
