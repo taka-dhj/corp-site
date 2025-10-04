@@ -430,7 +430,7 @@ function App() {
           </div>
 
           <h1 className="hero-title text-8xl md:text-9xl lg:text-[8rem] font-light text-white leading-[0.8] tracking-tight">
-            <span className="hero-title font-['Klee_One'] font-semibold text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[8rem] leading-[2.0] sm:leading-[2.0] md:leading-[1.8] mb-12 md:mb-24 block">本物の日本と<br />
+            <span className="hero-title font-['Klee_One'] font-semibold text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[8rem] leading-[2.0] sm:leading-[2.0] md:leading-[1.8] block mb-24 md:mb-48">本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
@@ -438,7 +438,7 @@ function App() {
             </span>
           </h1>
 
-          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mt-[76px] mb-24 sm:mb-32 md:mb-32 max-w-4xl mx-auto leading-[1.4] font-bold">
+          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-24 sm:mb-32 md:mb-32 max-w-4xl mx-auto leading-[1.4] font-bold">
             <span className="font-extrabold">地域の物語を紡ぎ、観光の未来に<br className="hidden md:block" />
             新たな価値を提案します</span>
           </p>
