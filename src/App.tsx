@@ -196,9 +196,20 @@ function App() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              <a 
-                href="#philosophy" 
+              <a
+                href="#philosophy"
                 className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('philosophy');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
               >
                 Philosophy
               </a>
@@ -273,8 +284,8 @@ function App() {
                   >
                     Executives
                   </a>
-                  <a 
-                    href="#company-info" 
+                  <a
+                    href="#company-info"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200"
                     onClick={(e) => {
                       e.preventDefault();
@@ -341,37 +352,92 @@ function App() {
             isMobileMenuOpen ? 'max-h-96 pb-6' : 'max-h-0'
           }`}>
             <nav className="flex flex-col gap-4 pt-4 border-t border-gray-200">
-              <a 
-                href="#philosophy" 
-                onClick={() => setIsMobileMenuOpen(false)}
+              <a
+                href="#philosophy"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  const element = document.getElementById('philosophy');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
                 className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Philosophy
               </a>
-              <a 
-                href="#services-header" 
-                onClick={() => setIsMobileMenuOpen(false)}
+              <a
+                href="#services-header"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  const element = document.getElementById('services-header');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
                 className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Services
               </a>
-              <a 
-                href="#strengths" 
-                onClick={() => setIsMobileMenuOpen(false)}
+              <a
+                href="#strengths"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  const element = document.getElementById('strengths');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
                 className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Strength
               </a>
-              <a 
-                href="#executives-header" 
-                onClick={() => setIsMobileMenuOpen(false)}
+              <a
+                href="#executives-header"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  const element = document.getElementById('executives-header');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
                 className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Executives
               </a>
-              <a 
-                href="#company-info" 
-                onClick={() => setIsMobileMenuOpen(false)}
+              <a
+                href="#company-info"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  const element = document.getElementById('company-info');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
                 className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 Profile
@@ -444,16 +510,29 @@ function App() {
           </p>
 
           <div className="hero-buttons flex flex-col sm:flex-row gap-4 sm:gap-4 md:gap-8 justify-center items-center px-4">
-            <button className="hero-button group relative bg-rose-600 hover:bg-rose-700 text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 transition-all duration-500 flex items-center gap-2 sm:gap-4 hover:gap-6 transform hover:-translate-y-1">
-              <span className="text-xs sm:text-sm md:text-lg font-light leading-tight">サービス詳細</span>
-              <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('services-header');
+                if (element) {
+                  const offsetTop = element.offsetTop - 120;
+                  window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+              className="hero-button group relative bg-rose-600 hover:bg-rose-700 text-white px-24 sm:px-8 md:px-12 py-12 sm:py-4 md:py-6 transition-all duration-500 flex items-center gap-2 sm:gap-4 hover:gap-6 transform hover:-translate-y-1"
+            >
+              <span className="text-base sm:text-sm md:text-lg font-light leading-tight">サービス詳細</span>
+              <ChevronRight className="w-6 h-6 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
             </button>
             <button
               onClick={() => setIsContactFormOpen(true)}
-              className="hero-button group relative border-2 border-white/40 hover:border-white text-white hover:bg-white/10 px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 transition-all duration-500 backdrop-blur-sm"
+              className="hero-button group relative border-2 border-white/40 hover:border-white text-white hover:bg-white/10 px-24 sm:px-8 md:px-12 py-12 sm:py-4 md:py-6 transition-all duration-500 backdrop-blur-sm"
             >
-              <span className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-lg font-light leading-tight">
-                <Mail className="w-5 h-5" />
+              <span className="flex items-center gap-2 sm:gap-3 text-base sm:text-sm md:text-lg font-light leading-tight">
+                <Mail className="w-6 h-6 sm:w-5 sm:h-5" />
                 お問い合わせ
               </span>
             </button>
@@ -906,7 +985,7 @@ function App() {
           </div>
           
           <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p className="font-medium">&copy; 2024 Discovery Hidden Japan. All rights reserved.</p>
+            <p className="font-medium">&copy; 2025 Discovery Hidden Japan. All rights reserved.</p>
           </div>
         </div>
       </footer>

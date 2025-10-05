@@ -14,11 +14,17 @@ export default {
         'ultralight': '100',
         'thin': '200',
         'light': '300',
-        'normal': '400',
-        'medium': '500',
+        'normal': '600',
+        'medium': '600',
         'semibold': '600',
         'bold': '700',
         'extrabold': '800'
+      },
+      fontSize: {
+        'xs': ['1.1rem', { lineHeight: '1rem' }],
+        'sm': ['1rem', { lineHeight: '1.25rem' }],
+        '3xl': ['2.9rem', { lineHeight: '2.25rem' }],
+        '5xl': ['2.8rem', { lineHeight: '1' }],
       },
       animation: {
         'zoom-in': 'zoom-in 5s ease-out forwards',
