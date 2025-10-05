@@ -505,7 +505,7 @@ function App() {
           </h1>
 
           <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-24 sm:mb-32 md:mb-32 max-w-4xl mx-auto leading-[1.4] font-bold">
-            <span className="font-extrabold">地域の物語を紡ぎ、観光の未来に<br className="hidden md:block" />
+            <span className="font-extrabold">地域の物語を紡ぎ、観光の未来に<br />
             新たな価値を提案します</span>
           </p>
 
