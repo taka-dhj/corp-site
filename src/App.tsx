@@ -511,7 +511,7 @@ function App() {
             </span>
           </h1>
 
-          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-[1.875rem] text-gray-200 mb-24 sm:mb-32 md:mb-32 max-w-4xl mx-auto leading-[1.4] font-bold">
+          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-gray-200 mb-24 sm:mb-32 md:mb-32 max-w-4xl mx-auto leading-[1.4] font-bold">
             <span className="font-extrabold">地域の物語を紡ぎ、観光の未来に<br />
             新たな価値を提案します</span>
           </p>
@@ -581,7 +581,7 @@ function App() {
           </div>
           
           <div className="space-y-12 text-left max-w-4xl mx-auto">
-            <p className="text-2xl md:text-3xl text-gray-800 leading-relaxed font-normal">
+            <p className="text-2xl md:text-3xl text-gray-800 leading-loose md:leading-loose font-normal">
               私たちDiscovery Hidden Japanは、旅人と地域をつなぎ、日本に息づく隠れた美しさと物語を世界に届けます。
             </p>
             
@@ -615,7 +615,7 @@ function App() {
             事業概要
           </h2>
           <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
-          <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-normal">
+          <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl mx-auto leading-loose md:leading-loose font-normal">
             <span className="text-rose-600 font-normal">オーバーツーリズムの緩和</span>および<span className="text-rose-600 font-normal">地方創生の実現</span>を軸に、<br className="hidden md:block" />
             持続可能な観光の未来を創造します
           </p>
@@ -798,7 +798,7 @@ function App() {
             }`}
           >
             <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
-              経営陣紹介
+              役員紹介
             </h2>
             <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
             <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
