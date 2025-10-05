@@ -41,12 +41,20 @@ function App() {
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
   const heroImages = [
-    'https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg',
-    'https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg',
-    'https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg',
-    'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg',
-    'https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg'
+    'https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    'https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    'https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    'https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop'
   ];
+
+  // Preload images
+  useEffect(() => {
+    heroImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -87,7 +95,7 @@ function App() {
       subtitle: '都市部から郊外へと人の流れを生み出すツアーを企画・造成',
       description: '富裕層を対象としたハイエンド向けのカスタムインバウンドツアー。質の高い体験と地域経済の活性化を同時に実現します。',
       icon: <MapPin className="w-8 h-8" />,
-      image: 'https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg',
+      image: 'https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       features: ['富裕層向けカスタムツアー', '地域経済活性化', '質の高い体験提供']
     },
     {
@@ -95,7 +103,7 @@ function App() {
       subtitle: 'インバウンドを起点とした観光需要の創出・拡大を支援',
       description: '観光資源の棚卸しからプロモーション戦略の策定、受け入れ体制の整備に至るまで一貫したコンサルティングを提供します。',
       icon: <Building2 className="w-8 h-8" />,
-      image: 'https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg',
+      image: 'https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       features: ['観光資源棚卸し', 'プロモーション戦略', '受け入れ体制整備']
     },
     {
@@ -103,7 +111,7 @@ function App() {
       subtitle: '最新のデジタルツールやAI技術を活用した業務改善',
       description: '業務効率化、顧客体験の最適化、収益性の向上を実現。実行フェーズまで伴走する支援を提供します。',
       icon: <Brain className="w-8 h-8" />,
-      image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg',
+      image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       features: ['AI技術活用', '業務効率化', '収益性向上']
     },
     {
@@ -111,7 +119,7 @@ function App() {
       subtitle: '訪日外国人および日本人旅行者を対象',
       description: '観光、視察、文化体験など幅広い目的に対応。個人旅行からグループ・企業向けのプライベートツアーまで、地域資源を活かした唯一無二の旅程を企画・造成します。',
       icon: <Users className="w-8 h-8" />,
-      image: 'https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg',
+      image: 'https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       features: ['個人・グループ対応', '文化体験重視', '唯一無二の旅程']
     },
     {
@@ -119,7 +127,7 @@ function App() {
       subtitle: '地方に点在する空き家を有効活用',
       description: '民泊としての新たな価値を創出する運営事業。空き家問題の解消と観光振興の両立を実現します。',
       icon: <Home className="w-8 h-8" />,
-      image: 'https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg',
+      image: 'https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       features: ['空き家有効活用', '地域問題解決', '観光振興両立']
     }
   ];
@@ -495,16 +503,15 @@ function App() {
             </p>
           </div>
 
-          <h1 className="hero-title text-8xl md:text-9xl lg:text-[8rem] font-light text-white leading-[0.8] tracking-tight">
-            <span className="hero-title font-['Klee_One'] font-semibold text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[8rem] leading-[2.0] sm:leading-[2.0] md:leading-[1.8] block mb-24 md:mb-48">本物の日本と<br />
+          <h1 className="hero-title font-['Klee_One'] font-semibold text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[8rem] leading-[1.3] sm:leading-[1.3] md:leading-[1.2] block mb-24 md:mb-48">
+            本物の日本と<br />
             世界をつなぎ、<br />
             <span className="text-rose-600">
               心に残る旅を創る
             </span>
-            </span>
           </h1>
 
-          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-24 sm:mb-32 md:mb-32 max-w-4xl mx-auto leading-[1.4] font-bold">
+          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-[1.875rem] text-gray-200 mb-24 sm:mb-32 md:mb-32 max-w-4xl mx-auto leading-[1.4] font-bold">
             <span className="font-extrabold">地域の物語を紡ぎ、観光の未来に<br />
             新たな価値を提案します</span>
           </p>
