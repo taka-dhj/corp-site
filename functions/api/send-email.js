@@ -233,7 +233,7 @@ export async function onRequest(context) {
       },
       body: JSON.stringify({
         from: 'noreply@discoveryhiddenjapan.com',
-        to: 'info@discoveryhiddenjapan.com',
+        to: 'taka@discoveryhiddenjapan.com',
         subject: `お問い合わせ: ${escapedSubject}`,
         html: emailBody,
         reply_to: email,
@@ -267,7 +267,7 @@ export async function onRequest(context) {
     console.log('Email sent successfully:', {
       id: resendData.id,
       from: 'noreply@discoveryhiddenjapan.com',
-      to: 'info@discoveryhiddenjapan.com',
+      to: 'taka@discoveryhiddenjapan.com',
       subject: escapedSubject
     });
 

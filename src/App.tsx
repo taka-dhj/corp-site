@@ -488,7 +488,7 @@ function App() {
         
         {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-4">
-          <div className="mb-4 md:mb-12">
+          <div className="mb-4 md:mb-12 hidden md:block">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
             <p className="text-gray-300 text-sm tracking-[0.4em] uppercase font-light mb-4 md:mb-8">
               Discovery Hidden Japan
@@ -829,7 +829,7 @@ function App() {
                   <h3 className="text-2xl font-light text-white mb-2">{executive.name}</h3>
                   <p className="text-rose-600 font-medium text-lg mb-4">{executive.position}</p>
 
-                  <p className="text-gray-300 leading-relaxed font-normal mb-6">
+                  <p className="text-gray-300 leading-relaxed font-normal mb-6 text-lg">
                     {executive.background}
                   </p>
 
