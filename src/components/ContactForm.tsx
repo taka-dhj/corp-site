@@ -42,7 +42,6 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     setSubmitStatus('idle');
 
     try {
-      // Cloudflare Functionsを使用してメール送信
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
@@ -51,16 +50,17 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      let result;
+      try {
+        result = await response.json();
+      } catch (parseError) {
+        console.error('Failed to parse response:', parseError);
+        throw new Error('サーバーからの応答が無効です');
       }
 
-      const result = await response.json();
-
-      if (result.success) {
+      if (response.ok && result.success) {
         setSubmitStatus('success');
-        
-        // 3秒後にフォームをリセットして閉じる
+
         setTimeout(() => {
           setFormData({
             name: '',
