@@ -274,7 +274,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
           <div className="mt-8 pt-6 border-t border-gray-200">
             <p className="text-sm text-gray-600 text-center">
               フォームからのお問い合わせに返信がございません場合は、お手数ですが下記メールまでご連絡ください。<br />
-              <span className="font-medium">taka@discoveryhiddenjapan.com</span><br />
+              <span className="font-medium">info@discoveryhiddenjapan.com</span><br />
               24時間受付
             </p>
           </div>
