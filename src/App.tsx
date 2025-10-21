@@ -172,11 +172,6 @@ function App() {
 
   const achievements = [
     { 
-      number: '500+', 
-      label: 'プロジェクト実績', 
-      description: '全国各地での成功事例'
-    },
-    { 
       number: '98%', 
       label: '顧客満足度', 
       description: '継続率業界トップクラス'
@@ -185,6 +180,11 @@ function App() {
       number: '50+', 
       label: 'パートナー自治体', 
       description: '信頼のネットワーク'
+    },
+    { 
+      number: '20+', 
+      label: '国内外パートナー企業', 
+      description: 'グローバルネットワーク'
     }
   ];
 
