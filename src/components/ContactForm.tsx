@@ -1,6 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Mail, Phone, User, Building, MessageSquare, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+
+// reCAPTCHA v3の型定義
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
 
 interface FormData {
   name: string;
@@ -17,8 +26,7 @@ interface ContactFormProps {
   onClose: () => void;
 }
 
-function ContactFormContent({ isOpen, onClose }: ContactFormProps) {
-  const { executeRecaptcha } = useGoogleReCaptcha();
+export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -30,6 +38,23 @@ function ContactFormContent({ isOpen, onClose }: ContactFormProps) {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  // reCAPTCHA v3の初期化
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${import.meta.env.VITE_RECAPTCHA_SITE_KEY}`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // クリーンアップ
+      const existingScript = document.querySelector(`script[src*="recaptcha/api.js"]`);
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -45,16 +70,24 @@ function ContactFormContent({ isOpen, onClose }: ContactFormProps) {
     setSubmitStatus('idle');
 
     try {
-      // reCAPTCHA v3トークンを取得
-      console.log('executeRecaptcha available:', !!executeRecaptcha);
+      // reCAPTCHA v3トークンを取得（公式の方法）
       console.log('Site key:', import.meta.env.VITE_RECAPTCHA_SITE_KEY);
       
-      if (!executeRecaptcha) {
-        throw new Error('reCAPTCHA is not available');
-      }
-
-      const recaptchaToken = await executeRecaptcha('contact_form');
-      console.log('reCAPTCHA token generated:', recaptchaToken ? 'yes' : 'no');
+      const recaptchaToken = await new Promise<string>((resolve, reject) => {
+        if (typeof window.grecaptcha === 'undefined') {
+          reject(new Error('reCAPTCHA is not loaded'));
+          return;
+        }
+        
+        window.grecaptcha.ready(() => {
+          window.grecaptcha.execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, { action: 'contact_form' })
+            .then((token: string) => {
+              console.log('reCAPTCHA token generated:', token ? 'yes' : 'no');
+              resolve(token);
+            })
+            .catch(reject);
+        });
+      });
       
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -298,22 +331,5 @@ function ContactFormContent({ isOpen, onClose }: ContactFormProps) {
         </div>
       </div>
     </div>
-  );
-}
-
-// reCAPTCHA Providerでラップしたメインコンポーネント
-export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
-  return (
-    <GoogleReCaptchaProvider
-      reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}
-      scriptProps={{
-        async: false,
-        defer: false,
-        appendTo: 'head',
-        nonce: undefined,
-      }}
-    >
-      <ContactFormContent isOpen={isOpen} onClose={onClose} />
-    </GoogleReCaptchaProvider>
   );
 }
