@@ -1,3 +1,6 @@
 name = "discovery-hidden-japan"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = "dist"
+
+[env.production.vars]
+RECAPTCHA_SECRET_KEY = "6LeubvMrAAAAAFzU1wgHrsRSM-45U2Z0jnt9P9-q"
