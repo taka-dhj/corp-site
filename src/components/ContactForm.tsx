@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, User, Building, MessageSquare, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 interface FormData {
   name: string;
@@ -8,6 +9,7 @@ interface FormData {
   phone: string;
   subject: string;
   message: string;
+  recaptchaToken?: string;
 }
 
 interface ContactFormProps {
@@ -15,7 +17,8 @@ interface ContactFormProps {
   onClose: () => void;
 }
 
-export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
+function ContactFormContent({ isOpen, onClose }: ContactFormProps) {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -42,12 +45,22 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     setSubmitStatus('idle');
 
     try {
+      // reCAPTCHA v3トークンを取得
+      if (!executeRecaptcha) {
+        throw new Error('reCAPTCHA is not available');
+      }
+
+      const recaptchaToken = await executeRecaptcha('contact_form');
+      
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken
+        }),
       });
 
       let result;
@@ -281,5 +294,22 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         </div>
       </div>
     </div>
+  );
+}
+
+// reCAPTCHA Providerでラップしたメインコンポーネント
+export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
+  return (
+    <GoogleReCaptchaProvider
+      reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}
+      scriptProps={{
+        async: false,
+        defer: false,
+        appendTo: 'head',
+        nonce: undefined,
+      }}
+    >
+      <ContactFormContent isOpen={isOpen} onClose={onClose} />
+    </GoogleReCaptchaProvider>
   );
 }
