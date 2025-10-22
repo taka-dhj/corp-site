@@ -70,7 +70,11 @@ export async function onRequest(context) {
     }
 
     // reCAPTCHA v3トークンの検証
+    console.log('reCAPTCHA token received:', recaptchaToken ? 'present' : 'missing');
+    console.log('RECAPTCHA_SECRET_KEY available:', env.RECAPTCHA_SECRET_KEY ? 'yes' : 'no');
+    
     if (!recaptchaToken) {
+      console.log('reCAPTCHA token validation failed: no token provided');
       return new Response(
         JSON.stringify({
           success: false,
