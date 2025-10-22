@@ -42,34 +42,12 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     setSubmitStatus('idle');
 
     try {
-      // reCAPTCHA v3トークンを取得（公式の方法）
-      console.log('Site key:', import.meta.env.VITE_RECAPTCHA_SITE_KEY);
-      
-      const recaptchaToken = await new Promise<string>((resolve, reject) => {
-        if (typeof window.grecaptcha === 'undefined') {
-          reject(new Error('reCAPTCHA is not loaded'));
-          return;
-        }
-        
-        window.grecaptcha.ready(() => {
-          window.grecaptcha.execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, { action: 'contact_form' })
-            .then((token: string) => {
-              console.log('reCAPTCHA token generated:', token ? 'yes' : 'no');
-              resolve(token);
-            })
-            .catch(reject);
-        });
-      });
-      
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          recaptchaToken
-        }),
+        body: JSON.stringify(formData),
       });
 
       let result;
