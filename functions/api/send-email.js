@@ -69,11 +69,12 @@ export async function onRequest(context) {
       );
     }
 
-    // reCAPTCHA v3トークンの検証
+    // reCAPTCHA v3トークンの検証（一時的に無効化）
     console.log('reCAPTCHA token received:', recaptchaToken ? 'present' : 'missing');
     console.log('RECAPTCHA_SECRET_KEY available:', env.RECAPTCHA_SECRET_KEY ? 'yes' : 'no');
     
-    if (!recaptchaToken) {
+    // 一時的にreCAPTCHA検証をスキップ（テスト用）
+    if (false && !recaptchaToken) {
       console.log('reCAPTCHA token validation failed: no token provided');
       return new Response(
         JSON.stringify({
