@@ -46,11 +46,15 @@ function ContactFormContent({ isOpen, onClose }: ContactFormProps) {
 
     try {
       // reCAPTCHA v3トークンを取得
+      console.log('executeRecaptcha available:', !!executeRecaptcha);
+      console.log('Site key:', import.meta.env.VITE_RECAPTCHA_SITE_KEY);
+      
       if (!executeRecaptcha) {
         throw new Error('reCAPTCHA is not available');
       }
 
       const recaptchaToken = await executeRecaptcha('contact_form');
+      console.log('reCAPTCHA token generated:', recaptchaToken ? 'yes' : 'no');
       
       const response = await fetch('/api/send-email', {
         method: 'POST',
