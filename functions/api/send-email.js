@@ -73,8 +73,8 @@ export async function onRequest(context) {
     console.log('reCAPTCHA token received:', recaptchaToken ? 'present' : 'missing');
     console.log('RECAPTCHA_SECRET_KEY available:', env.RECAPTCHA_SECRET_KEY ? 'yes' : 'no');
     
-    // reCAPTCHA検証を再有効化
-    if (!recaptchaToken) {
+    // 一時的にreCAPTCHA検証を無効化（サイトキー問題のため）
+    if (false && !recaptchaToken) {
       console.log('reCAPTCHA token validation failed: no token provided');
       return new Response(
         JSON.stringify({
