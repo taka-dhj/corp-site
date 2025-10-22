@@ -51,7 +51,7 @@ export async function onRequest(context) {
       );
     }
 
-    const { name, email, company, phone, subject, message, recaptchaToken } = formData;
+    const { name, email, company, phone, subject, message } = formData;
 
     if (!name || !email || !subject || !message) {
       return new Response(
@@ -69,64 +69,6 @@ export async function onRequest(context) {
       );
     }
 
-    // reCAPTCHA v3トークンの検証（一時的に無効化）
-    console.log('reCAPTCHA token received:', recaptchaToken ? 'present' : 'missing');
-    console.log('RECAPTCHA_SECRET_KEY available:', env.RECAPTCHA_SECRET_KEY ? 'yes' : 'no');
-    
-    // reCAPTCHA検証を再有効化
-    if (!recaptchaToken) {
-      console.log('reCAPTCHA token validation failed: no token provided');
-      return new Response(
-        JSON.stringify({
-          success: false,
-          error: 'セキュリティ認証に失敗しました'
-        }),
-        {
-          status: 400,
-          headers: {
-            ...corsHeaders,
-            'Content-Type': 'application/json'
-          },
-        }
-      );
-    }
-
-    // reCAPTCHA v3トークンをGoogleに送信して検証
-    const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams({
-        secret: env.RECAPTCHA_SECRET_KEY,
-        response: recaptchaToken,
-        remoteip: request.headers.get('CF-Connecting-IP') || request.headers.get('X-Forwarded-For') || 'unknown'
-      }),
-    });
-
-    const recaptchaData = await recaptchaResponse.json();
-
-    if (!recaptchaData.success || recaptchaData.score < 0.5) {
-      console.log('reCAPTCHA verification failed:', {
-        success: recaptchaData.success,
-        score: recaptchaData.score,
-        errors: recaptchaData['error-codes']
-      });
-      
-      return new Response(
-        JSON.stringify({
-          success: false,
-          error: 'セキュリティ認証に失敗しました。もう一度お試しください。'
-        }),
-        {
-          status: 400,
-          headers: {
-            ...corsHeaders,
-            'Content-Type': 'application/json'
-          },
-        }
-      );
-    }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
