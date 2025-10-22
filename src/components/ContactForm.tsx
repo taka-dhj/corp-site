@@ -41,6 +41,28 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    // バリデーション
+    if (!formData.name.trim()) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+    if (!formData.email.trim()) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+    if (!formData.subject.trim()) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+    if (!formData.message.trim()) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',

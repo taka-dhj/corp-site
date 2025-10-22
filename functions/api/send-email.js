@@ -53,11 +53,60 @@ export async function onRequest(context) {
 
     const { name, email, company, phone, subject, message } = formData;
 
-    if (!name || !email || !subject || !message) {
+    // バリデーション強化（空文字・空白文字もチェック）
+    if (!name || !name.trim()) {
       return new Response(
         JSON.stringify({
           success: false,
-          error: '必須項目が入力されていません'
+          error: 'お名前を入力してください'
+        }),
+        {
+          status: 400,
+          headers: {
+            ...corsHeaders,
+            'Content-Type': 'application/json'
+          },
+        }
+      );
+    }
+    
+    if (!email || !email.trim()) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: 'メールアドレスを入力してください'
+        }),
+        {
+          status: 400,
+          headers: {
+            ...corsHeaders,
+            'Content-Type': 'application/json'
+          },
+        }
+      );
+    }
+    
+    if (!subject || !subject.trim()) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: 'お問い合わせ種別を選択してください'
+        }),
+        {
+          status: 400,
+          headers: {
+            ...corsHeaders,
+            'Content-Type': 'application/json'
+          },
+        }
+      );
+    }
+    
+    if (!message || !message.trim()) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: 'メッセージを入力してください'
         }),
         {
           status: 400,
