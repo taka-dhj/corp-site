@@ -1,0 +1,181 @@
+{
+  "common": {
+    "companyName": "Discovery Hidden Japan",
+    "scroll": "SCROLL"
+  },
+  "nav": {
+    "philosophy": "Philosophy",
+    "services": "Services",
+    "about": "About",
+    "strength": "Strength",
+    "executives": "Executives",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "title": "本物の日本と<0/>世界をつなぎ、<0/><1>心に残る旅を創る</1>",
+    "subtitle": "地域の物語を紡ぎ、観光の未来に<0/>新たな価値を提案します",
+    "serviceDetails": "サービス詳細",
+    "contact": "お問い合わせ"
+  },
+  "philosophy": {
+    "title": "Our Philosophy",
+    "heading": "心と土地を結び、<0/><1>時を紡ぐ</1>",
+    "description1": "私たちDiscovery Hidden Japanは、旅人と地域をつなぎ、日本に息づく隠れた美しさと物語を世界に届けます。",
+    "description2": "観光地化されすぎた風景の陰にある、本物の暮らし、文化、風土との出会いを大切にし、旅の価値を再定義します。",
+    "description3": "地方と旅人を結ぶ架け橋となり、オーバーツーリズムの緩和や地域創生を軸に社会課題の解決に取り組むことで、単なる観光事業ではない、人と心、地域と世界が織りなす、<0>新しい時代のツーリズムを提唱</0>します。"
+  },
+  "overview": {
+    "title": "事業概要",
+    "description": "<0>オーバーツーリズムの緩和</0>および<1>地方創生の実現</1>を軸に、<2/>持続可能な観光の未来を創造します"
+  },
+  "achievements": {
+    "customerSatisfaction": {
+      "label": "顧客満足度",
+      "description": "継続率業界トップクラス"
+    },
+    "partnerLocalGov": {
+      "label": "パートナー自治体",
+      "description": "信頼のネットワーク"
+    },
+    "partnerCompanies": {
+      "label": "国内外パートナー企業",
+      "description": "グローバルネットワーク"
+    }
+  },
+  "services": {
+    "title": "主要サービス",
+    "subtitle": "5つの専門領域で、日本の観光業界に革新をもたらします",
+    "inboundTour": {
+      "title": "インバウンドツアー企画・造成",
+      "subtitle": "都市部から郊外へと人の流れを生み出すツアーを企画・造成",
+      "description": "富裕層を対象としたハイエンド向けのカスタムインバウンドツアー。質の高い体験と地域経済の活性化を同時に実現します。",
+      "features": ["富裕層向けカスタムツアー", "地域経済活性化", "質の高い体験提供"]
+    },
+    "consulting": {
+      "title": "地方自治体向けコンサルティング",
+      "subtitle": "インバウンドを起点とした観光需要の創出・拡大を支援",
+      "description": "観光資源の棚卸しからプロモーション戦略の策定、受け入れ体制の整備に至るまで一貫したコンサルティングを提供します。",
+      "features": ["観光資源棚卸し", "プロモーション戦略", "受け入れ体制整備"]
+    },
+    "dxSolution": {
+      "title": "観光事業者向けDXソリューション",
+      "subtitle": "最新のデジタルツールやAI技術を活用した業務改善",
+      "description": "業務効率化、顧客体験の最適化、収益性の向上を実現。実行フェーズまで伴走する支援を提供します。",
+      "features": ["AI技術活用", "業務効率化", "収益性向上"]
+    },
+    "customTravel": {
+      "title": "カスタム手配旅行",
+      "subtitle": "訪日外国人および日本人旅行者を対象",
+      "description": "観光、視察、文化体験など幅広い目的に対応。個人旅行からグループ・企業向けのプライベートツアーまで、地域資源を活かした唯一無二の旅程を企画・造成します。",
+      "features": ["個人・グループ対応", "文化体験重視", "唯一無二の旅程"]
+    },
+    "vacationRental": {
+      "title": "空き家活用民泊運営",
+      "subtitle": "地方に点在する空き家を有効活用",
+      "description": "民泊としての新たな価値を創出する運営事業。空き家問題の解消と観光振興の両立を実現します。",
+      "features": ["空き家有効活用", "地域問題解決", "観光振興両立"]
+    }
+  },
+  "strengths": {
+    "title": "私たちの強み",
+    "subtitle": "多様な専門性と実績が生み出す、確かな価値",
+    "global": {
+      "title": "グローバルな視点",
+      "description": "外資系IT企業での豊富な経験を活かし、世界基準のサービスを提供"
+    },
+    "technology": {
+      "title": "最先端技術",
+      "description": "AI・DXを活用した業務効率化とデジタルマーケティング戦略"
+    },
+    "support": {
+      "title": "実践的支援",
+      "description": "戦略立案から実行まで、現場に寄り添った伴走型コンサルティング"
+    }
+  },
+  "executives": {
+    "title": "役員紹介",
+    "subtitle": "多様なバックグラウンドと専門性を持つプロフェッショナル",
+    "shoKishiro": {
+      "background": "旅行代理店勤務した後、Booking.comやMetaをはじめ外資系IT企業にて長年勤務。インバウンド新規事業の戦略立案、自治体へのコンサルティングを得意とし、個人でのコンサルティング実績多数。",
+      "expertise": ["戦略立案", "インバウンド事業", "自治体コンサルティング"]
+    },
+    "yoshihiroFujimoto": {
+      "background": "大手製造業、大手コンサルティングファームやMicrosoft等での経験を経て参画。顧客管理ツールの販売や、ITソリューションの提案など、IT技術を駆使した業務効率化提案が可能。",
+      "expertise": ["ITソリューション", "業務効率化", "システム開発"]
+    },
+    "takashiAoki": {
+      "background": "フィリピン・セブ在住。NGOでの国際協力やBPO業務の管理統括、飲食店経営や社会起業創設など、多岐に渡る経験から、既存概念に囚われない課題解決が可能。",
+      "expertise": ["国際協力", "BPO管理", "社会起業"]
+    },
+    "junkoOkabe": {
+      "background": "30年以上に亘りJTBで勤め、フィリピンを始めとする、東南アジア地域やオーストラリアのツアー造成に深い経験を持つ。",
+      "expertise": ["ツアー造成", "東南アジア", "オーストラリア"]
+    },
+    "ayanoFujimoto": {
+      "background": "18歳で単身アメリカNYへ。学位取得、旅行代理店勤務の後、帰国。Booking.comやGoogleなどを経て、2024年Microsoftへ転職。旅行業界とデジタルマーケティング分野を専門とし、幅広い業界の顧客との実績多数。",
+      "expertise": ["デジタルマーケティング", "旅行業界", "国際経験"]
+    }
+  },
+  "companyInfo": {
+    "title": "会社概要",
+    "companyName": "会社名",
+    "companyNameValue": "Discovery Hidden Japan株式会社",
+    "address": "所在地",
+    "addressValue": "東京都港区高輪2丁目11番9号",
+    "capital": "資本金",
+    "capitalValue": "920万円",
+    "established": "設立",
+    "establishedValue": "2025年7月17日",
+    "representative": "代表",
+    "representativeValue": "希代　翔",
+    "registration": "登録資格",
+    "registrationValue": "東京都知事登録旅行業 第2 - 8865号",
+    "membership": "加盟・認可団体",
+    "membershipValue": "一般社団法人 日本旅行業協会(JATA)"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "革新的なソリューションで、日本の観光業界の未来を共に創造します",
+    "button": "お問い合わせフォーム",
+    "orEmail": "または直接メールでお問い合わせ"
+  },
+  "footer": {
+    "tagline": "心と土地を結び、時を紡ぐ",
+    "copyright": "© 2025 Discovery Hidden Japan. All rights reserved."
+  },
+  "contactForm": {
+    "title": "お問い合わせ",
+    "subtitle": "お気軽にご相談ください",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "company": "会社名・団体名",
+    "phone": "電話番号",
+    "subject": "お問い合わせ種別",
+    "message": "メッセージ",
+    "required": "*",
+    "selectSubject": "選択してください",
+    "placeholder": {
+      "name": "山田太郎",
+      "email": "example@company.com",
+      "company": "株式会社サンプル",
+      "phone": "03-1234-5678",
+      "message": "お問い合わせ内容をご記入ください..."
+    },
+    "subjects": {
+      "inboundTour": "インバウンドツアー企画について",
+      "consulting": "自治体向けコンサルティングについて",
+      "dxSolution": "DXソリューションについて",
+      "customTravel": "カスタム手配旅行について",
+      "vacationRental": "民泊運営について",
+      "documentRequest": "資料請求",
+      "other": "その他"
+    },
+    "submit": "送信する",
+    "submitting": "送信中...",
+    "cancel": "キャンセル",
+    "success": "お問い合わせを送信しました。ありがとうございます。",
+    "error": "送信に失敗しました。もう一度お試しください。",
+    "footer": "フォームからのお問い合わせに返信がございません場合は、お手数ですが下記メールまでご連絡ください。<0/>24時間受付"
+  }
+}
+

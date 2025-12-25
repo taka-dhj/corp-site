@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-3xl {
+  font-size: 2.9rem;
+  line-height: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-3xl {
+    font-size: 2.9rem;
+    line-height: 3.5rem;
+  }
+}
+
+
+
+@layer base {
+  html {
+    font-family: 'Klee One', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', sans-serif !important;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    font-family: 'Klee One', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', sans-serif !important;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Force Klee One on all elements */
+  * {
+    font-family: 'Klee One', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', sans-serif !important;
+  }
+  
+  /* Elegant heading styles */
+  .font-display {
+    font-family: 'Klee One', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', sans-serif !important;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+  }
+  
+  .font-body {
+    font-family: 'Klee One', 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', sans-serif !important;
+    font-weight: 400;
+  }
+
+  /* Custom zoom animation */
+  @keyframes zoom-in {
+    0% {
+      transform: scale(1.0);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  .animate-zoom-in {
+    animation: zoom-in 5s ease-out forwards;
+  }
+
+  /* モバイル用レスポンシブ調整 */
+  /* 1. line-height の強制指定 */
+  @media (max-width: 768px) {
+    .hero-title {
+      line-height: 1.1 !important;
+    }
+    /* 英語版のヒーロータイトル */
+    html[lang="en"] .hero-title {
+      font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+      line-height: 1.15 !important;
+      max-width: 90% !important;
+    }
+    .hero-subtitle {
+      line-height: 1.4 !important;
+    }
+    h1, h2, h3 {
+      line-height: 1.3 !important;
+    }
+    p {
+      line-height: 1.5 !important;
+    }
+  }
+  
+  /* 2. margin / padding の見直し */
+  @media (max-width: 768px) {
+    h1, h2, h3, .hero-title {
+      margin-top: 0.5em !important;
+      margin-bottom: 1em !important;
+    }
+    p, .hero-subtitle {
+      margin-top: 1em !important;
+      margin-bottom: 1.5em !important;
+    }
+  }
+  
+  /* 3. 親要素の高さ調整 */
+  @media (max-width: 768px) {
+    section {
+      padding: 2rem 0 !important;
+    }
+  }
+  
+  /* 4. CSS リセット・ベーススタイル */
+  @media (max-width: 768px) {
+    .w-24.h-px {
+      margin: 2rem auto !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-subtitle {
+      font-size: clamp(0.875rem, 3vw, 1.125rem);
+      line-height: 1.2 !important;
+      margin-bottom: 1.5rem !important;
+    }
+
+    .hero-buttons {
+      flex-direction: column !important;
+      gap: 0.3rem !important;
+      padding: 0 1rem !important;
+    }
+
+    .hero-button {
+      font-size: 0.875rem !important;
+      padding: 0.5rem 1rem !important;
+      width: 100% !important;
+      max-width: 240px !important;
+      line-height: 1.2 !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: clamp(1.25rem, 5vw, 2rem);
+      line-height: 1.5 !important;
+      margin-bottom: 1.5rem !important;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.75rem, 3vw, 1rem);
+      line-height: 1.2 !important;
+      margin-bottom: 4rem !important;
+    }
+
+    .hero-button {
+      font-size: 0.5rem !important;
+      padding: 1.2rem 1.6rem !important;
+      padding-top: 1.2rem !important;
+      padding-right: 1.6rem !important;
+      padding-bottom: 1.2rem !important;
+      padding-left: 1.6rem !important;
+      max-width: 220px !important;
+    }
+  }
+}

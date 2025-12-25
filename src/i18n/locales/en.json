@@ -1,0 +1,181 @@
+{
+  "common": {
+    "companyName": "Discovery Hidden Japan",
+    "scroll": "SCROLL"
+  },
+  "nav": {
+    "philosophy": "Philosophy",
+    "services": "Services",
+    "about": "About",
+    "strength": "Strength",
+    "executives": "Executives",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Connecting authentic Japan <0/>with the world,<0/> <1>creating unforgettable journeys</1>",
+    "subtitle": "We weave regional stories and propose<0/> new value for the future of tourism",
+    "serviceDetails": "Service Details",
+    "contact": "Contact"
+  },
+  "philosophy": {
+    "title": "Our Philosophy",
+    "heading": "Connecting hearts and land,<0/> <1>weaving stories through time</1>",
+    "description1": "We, Discovery Hidden Japan, connect travelers with regions and bring the hidden beauty and stories of Japan to the world.",
+    "description2": "We cherish encounters with authentic life, culture, and atmosphere found beyond over-commercialized tourist destinations, and redefine the value of travel.",
+    "description3": "By serving as a bridge connecting regions and travelers, and addressing social issues through alleviating overtourism and regional revitalization, we advocate for a <0>new era of tourism</0> woven through people, regions, and the world."
+  },
+  "overview": {
+    "title": "Business Overview",
+    "description": "With a focus on <0>alleviating overtourism</0> and <1>regional revitalization</1>,<2/> we create a sustainable future for tourism"
+  },
+  "achievements": {
+    "customerSatisfaction": {
+      "label": "Customer Satisfaction",
+      "description": "Top-class retention rate in the industry"
+    },
+    "partnerLocalGov": {
+      "label": "Partner Local Governments",
+      "description": "Trusted network"
+    },
+    "partnerCompanies": {
+      "label": "Domestic & International Partner Companies",
+      "description": "Global network"
+    }
+  },
+  "services": {
+    "title": "Main Services",
+    "subtitle": "Bringing innovation to Japan's tourism industry through five specialized areas",
+    "inboundTour": {
+      "title": "Inbound Tour Planning & Development",
+      "subtitle": "Planning and developing tours that channel tourism from urban to rural areas",
+      "description": "High-end custom inbound tours for affluent travelers. We deliver exceptional experiences while simultaneously revitalizing regional economies.",
+      "features": ["Custom tours for affluent travelers", "Regional economic revitalization", "High-quality experience provision"]
+    },
+    "consulting": {
+      "title": "Local Government Consulting",
+      "subtitle": "Supporting the creation and expansion of tourism demand starting from inbound tourism",
+      "description": "We provide comprehensive consulting, from conducting tourism resource inventories to developing promotion strategies and building tourism readiness.",
+      "features": ["Tourism resource inventory", "Promotion strategy", "Building tourism readiness"]
+    },
+    "dxSolution": {
+      "title": "DX Solutions for Tourism Businesses",
+      "subtitle": "Business transformation using cutting-edge digital tools and AI technology",
+      "description": "We enhance operational efficiency, optimize customer experience, and improve profitability. We provide support throughout the entire execution phase.",
+      "features": ["AI technology utilization", "Operational efficiency", "Profitability improvement"]
+    },
+    "customTravel": {
+      "title": "Custom Travel Arrangements",
+      "subtitle": "For inbound foreign visitors and Japanese travelers",
+      "description": "We accommodate a wide range of purposes including tourism, inspections, and cultural experiences. From individual trips to group and corporate private tours, we plan and develop unique itineraries that leverage regional resources.",
+      "features": ["Individual & group support", "Cultural experience focus", "Unique itineraries"]
+    },
+    "vacationRental": {
+      "title": "Vacation Rental Operations Leveraging Vacant Properties",
+      "subtitle": "Effectively utilizing scattered vacant properties in rural areas",
+      "description": "A management business that creates new value as vacation rentals. We address both the vacancy issue and tourism promotion simultaneously.",
+      "features": ["Effective use of vacant properties", "Solving regional problems", "Balancing tourism promotion"]
+    }
+  },
+  "strengths": {
+    "title": "Our Strengths",
+    "subtitle": "Reliable value created by diverse expertise and achievements",
+    "global": {
+      "title": "Global Perspective",
+      "description": "Leveraging rich experience at foreign-affiliated IT companies to provide world-class services"
+    },
+    "technology": {
+      "title": "Cutting-edge Technology",
+      "description": "Operational efficiency and digital marketing strategies utilizing AI and DX"
+    },
+    "support": {
+      "title": "Practical Support",
+      "description": "Hands-on consulting that accompanies from strategy formulation to execution"
+    }
+  },
+  "executives": {
+    "title": "Executive Team",
+    "subtitle": "Experts with diverse backgrounds gathered together",
+    "shoKishiro": {
+      "background": "After working at a travel agency, he worked for many years at foreign IT companies including Booking.com and Meta. He specializes in strategic planning for new inbound businesses and consulting for local governments, with numerous individual consulting achievements.",
+      "expertise": ["Strategic Planning", "Inbound Business", "Local Government Consulting"]
+    },
+    "yoshihiroFujimoto": {
+      "background": "Joined after experience at major manufacturers, major consulting firms, and Microsoft. Capable of proposing operational efficiency improvements using IT technology, such as sales of customer management tools and proposals for IT solutions.",
+      "expertise": ["IT Solutions", "Operational Efficiency", "System Development"]
+    },
+    "takashiAoki": {
+      "background": "Resides in Cebu, Philippines. With diverse experience including international cooperation in NGOs, management of BPO operations, restaurant management, and social entrepreneurship, he can solve problems without being bound by existing concepts.",
+      "expertise": ["International Cooperation", "BPO Management", "Social Entrepreneurship"]
+    },
+    "junkoOkabe": {
+      "background": "Worked at JTB for over 30 years, with deep experience in tour development for Southeast Asia and Australia, including the Philippines.",
+      "expertise": ["Tour Development", "Southeast Asia", "Australia"]
+    },
+    "ayanoFujimoto": {
+      "background": "Moved to NY, USA alone at 18. After obtaining a degree and working at a travel agency, she returned to Japan. After working at Booking.com and Google, she moved to Microsoft in 2024. Specializes in the travel industry and digital marketing, with numerous achievements with clients in various industries.",
+      "expertise": ["Digital Marketing", "Travel Industry", "International Experience"]
+    }
+  },
+  "companyInfo": {
+    "title": "Company Profile",
+    "companyName": "Company Name",
+    "companyNameValue": "Discovery Hidden Japan Co., Ltd.",
+    "address": "Address",
+    "addressValue": "2-11-9 Takanawa, Minato-ku, Tokyo",
+    "capital": "Capital",
+    "capitalValue": "9.2 million JPY",
+    "established": "Established",
+    "establishedValue": "July 17, 2025",
+    "representative": "Representative",
+    "representativeValue": "Sho Kitai",
+    "registration": "Registration",
+    "registrationValue": "Travel Agency registered with Tokyo Metropolitan Government, Registration No. 2-8865",
+    "membership": "Membership & Certification",
+    "membershipValue": "Full Member of Japan Association of Travel Agents (JATA)"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Together, we create the future of Japan's tourism industry with innovative solutions",
+    "button": "Contact Form",
+    "orEmail": "Or contact us directly by email"
+  },
+  "footer": {
+    "tagline": "Connecting hearts and land, weaving stories through time",
+    "copyright": "© 2025 Discovery Hidden Japan. All rights reserved."
+  },
+  "contactForm": {
+    "title": "Contact",
+    "subtitle": "Please feel free to contact us",
+    "name": "Name",
+    "email": "Email Address",
+    "company": "Company / Organization",
+    "phone": "Phone Number",
+    "subject": "Inquiry Type",
+    "message": "Message",
+    "required": "*",
+    "selectSubject": "Please select",
+    "placeholder": {
+      "name": "John Doe",
+      "email": "example@company.com",
+      "company": "Company Inc.",
+      "phone": "123-456-7890",
+      "message": "Please enter your inquiry..."
+    },
+    "subjects": {
+      "inboundTour": "Inbound Tour Planning",
+      "consulting": "Local Government Consulting",
+      "dxSolution": "DX Solutions",
+      "customTravel": "Custom Travel Arrangements",
+      "vacationRental": "Vacation Rental Operations",
+      "documentRequest": "Document Request",
+      "other": "Other"
+    },
+    "submit": "Send",
+    "submitting": "Sending...",
+    "cancel": "Cancel",
+    "success": "Your inquiry has been sent. Thank you.",
+    "error": "Failed to send. Please try again.",
+    "footer": "If you do not receive a reply to your inquiry from the form, please contact us at the email below.<0/>24/7 Support"
+  }
+}
+
